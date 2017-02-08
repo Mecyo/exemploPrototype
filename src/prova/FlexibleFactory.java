@@ -16,10 +16,8 @@ class FlexibleFactory {
     }
     
     public Boolean removePrototype(String nome){
-        if(!listaPrototypes.containsKey(nome)) 
+        if(listaPrototypes.remove(nome) == null)
             return Boolean.FALSE;
-        
-        listaPrototypes.remove(nome);
         return Boolean.TRUE;
     }
     
